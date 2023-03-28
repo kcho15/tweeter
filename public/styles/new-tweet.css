@@ -20,16 +20,14 @@
   outline: none; 
 }
 
-#tweet-text::placeholder {
-  color:#304179;
-  font-size: 150%;
-  font-weight: 600;
-  align-items: end;
-}
-
 button {
   background: #304179;
   color: #fff;
   border: none;
   border: 3px solid #4056A1;
 }
+
+#char-counter-negative {
+  color: red;
+}
+
