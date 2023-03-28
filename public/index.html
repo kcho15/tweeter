@@ -3,12 +3,24 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <style> </style>
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Icons -->
+    <script src="https://kit.fontawesome.com/cda009b82c.js" crossorigin="anonymous"></script>
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" /> 
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -19,11 +31,40 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+      <nav class="nav">
+          <span class="logo-text">tweeter</span>
+          <div class="icon-text-container">
+            <div class="icon-text"><strong>Write</strong>&nbspa new tweet</div>
+            <i class="fa-solid fa-angles-down" style="color: #ff0000;"></i>
+          </div>         
+      </nav>
+      <header>
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <!-- <br> -->
+        <div>
+            <h2><span class="bold">Amy</span> Hansel</h2>
+        </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+    
+      <section class="new-tweet">
+        <form action="/tweets" method="POST">
+
+          <label for="tweet-text" ></label>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          
+          <div class="logo-text tweet-button-counter">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+          
+        </form>
+      </section>
+    
+    </main>
   </body>
 </html>

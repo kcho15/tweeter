@@ -1,0 +1,35 @@
+
+.new-tweet  {
+  font-weight: 600;
+  padding-top: 0.5em;
+  color: #545149;
+}
+
+.tweet-button-counter {
+  display: flex;
+  font-size: 100%;
+  justify-content: space-between;
+  padding-top: 0.5em;
+}
+
+#tweet-text, #tweet-text:focus {
+  background: none;
+  border: none; 
+  border-bottom: 6px solid #545149;
+  width: 100%;
+  outline: none; 
+}
+
+#tweet-text::placeholder {
+  color:#304179;
+  font-size: 150%;
+  font-weight: 600;
+  align-items: end;
+}
+
+button {
+  background: #304179;
+  color: #fff;
+  border: none;
+  border: 3px solid #4056A1;
+}
