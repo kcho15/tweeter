@@ -1,13 +1,23 @@
 header {
   display: flex;
-  margin-top: 120px; 
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
   height: 400px;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: end; 
   align-items: center;
   color: #FFFFFF;
   background-color: #42c297;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.hex-avatar {
+  display: flex; 
+  justify-content: center;
+  width: 200px;
+  height: auto; 
+  padding-bottom: 0.5em;
 }
 
 h2 {

@@ -1,25 +1,38 @@
 
-.new-tweet  {
+#new-tweet-form #tweet-text-prompt {
+  display: flex; 
   font-weight: 600;
-  padding-top: 0.5em;
   color: #545149;
+  margin-top: 50px;
+  padding-top: 1em; 
   padding-bottom: 2em; 
 }
-/* child of .new-tweet */
+
+#tweet-text-prompt {
+  font-weight: 600;
+}
+
+/* child of #new-tweet-form */
 .tweet-button-counter {
   display: flex;
   font-size: 100%;
   justify-content: space-between;
   padding-top: 0.5em;
+  padding-bottom: 2em;
 }
 
 /* child of logo-text tweet-button-counter */
 #tweet-text, #tweet-text:focus {
+  display: flex; 
+  font-weight: 600;
+  color: #545149;
   background: none;
   border: none; 
   border-bottom: 6px solid #545149;
   width: 100%;
-  outline: none; 
+  outline: none;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 button {
@@ -29,7 +42,7 @@ button {
   border: 3px solid #4056A1;
 }
 
-.article {
+.tweet {
   align-items: flex-end;
   flex-direction: column;
   padding: 1em;
@@ -39,19 +52,20 @@ button {
   border-radius: 2px;
   width: 100%;
   color: #545149;
-  gap: 0.5em; 
+  gap: 0.5em;
+  margin-bottom: 1em;  
 }
 
-.article:hover {
+.tweet:hover {
   box-shadow: 5px 5px rgba(0, 0, 255, .2);
 
 }
 
-.article > * {
+.tweet > * {
   width: 100%;
 }
 
-/* Child of .article */
+/* Child of .tweet */
 #top-half {
   display: flex;
   flex-direction: row;
@@ -73,6 +87,8 @@ button {
 
 .user1 img {
   width: 40%;
+  object-fit: cover;
+  border-radius:50%;
 }
 
 .handle {
