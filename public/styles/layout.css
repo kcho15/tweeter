@@ -25,9 +25,12 @@ body {
 }
 
 main {
+  display: flex; 
+  flex-direction: column;
   width: 90%;
   background-color: #f4f1ec;
   margin: auto; 
+  padding-bottom: 2rem; 
 }
 
 

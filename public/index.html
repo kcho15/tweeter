@@ -55,17 +55,35 @@
     
       <section class="new-tweet">
         <form action="/tweets" method="POST">
-
           <label for="tweet-text" >What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          
+          <textarea name="text" id="tweet-text"></textarea>       
           <div class="logo-text tweet-button-counter">
             <button type="submit">Tweet</button>
             <output name="counter" id="char-counter" for="tweet-text"> <a id="char-counter"></a></output>
           </div>
-          
         </form>
       </section>
+
+      <div class="container" id="tweet-log">
+        <article class="article">
+          <header id="top-half">
+              <div class="user1">
+                <img src="/images/profile-pic.png">
+                <span>Dr. Milo</span>
+              </div>
+              <div class="handle">@drMilo</div>
+          </header>
+            <div class="canned-text">Hello World!</div>
+          <footer>
+            <div class="days">10 days ago</div>
+            <div class="tweet-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </div>
     
     </main>
   </body>

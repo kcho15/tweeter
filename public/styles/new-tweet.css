@@ -3,8 +3,9 @@
   font-weight: 600;
   padding-top: 0.5em;
   color: #545149;
+  padding-bottom: 2em; 
 }
-
+/* child of .new-tweet */
 .tweet-button-counter {
   display: flex;
   font-size: 100%;
@@ -12,6 +13,7 @@
   padding-top: 0.5em;
 }
 
+/* child of logo-text tweet-button-counter */
 #tweet-text, #tweet-text:focus {
   background: none;
   border: none; 
@@ -27,7 +29,92 @@ button {
   border: 3px solid #4056A1;
 }
 
-#char-counter-negative {
-  color: red;
+.article {
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 1em;
+  display: flex; 
+  background: none;
+  border: 3px solid #545149;
+  border-radius: 2px;
+  width: 100%;
+  color: #545149;
+  gap: 0.5em; 
+}
+
+.article:hover {
+  box-shadow: 5px 5px rgba(0, 0, 255, .2);
+
+}
+
+.article > * {
+  width: 100%;
+}
+
+/* Child of .article */
+#top-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin-top: 0;
+  margin-bottom: 20px; 
+  background: none;
+  color: #545149;
+}
+
+.user1 {
+  display: flex; 
+  align-items: center;
+  gap: 0.5em; 
+}
+
+
+.user1 img {
+  width: 40%;
+}
+
+.handle {
+  color: #4056A1;
+  font-weight: 600;
+}
+
+.canned-text {
+  display: flex;
+  background: none;
+  justify-content: flex-start;
+  color: #545149;
+  font-weight: 600;
+  align-items: center;
+  padding-bottom: 0.5em; 
+  border-bottom: 3px solid #545149;
+}
+
+footer {
+  display:flex;
+  font-size: small; 
+  justify-content: space-between;
+}
+
+.days {
+  color: #545149;
+  font-weight: 600;
+  font-size: 1rem; 
+}
+
+.tweet-icons {
+  display: flex; 
+  flex-direction: row; 
+  gap: 0.5em; 
+}
+
+.tweet-icons > i {
+  font-size: 1.5rem;
+  color:#4056A1;
+}
+
+.tweet-icons > i:hover {
+  color:#42c297;
 }
 

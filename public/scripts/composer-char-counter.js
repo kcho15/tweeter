@@ -6,7 +6,7 @@ $(document).ready(function() {
   // event handler to textarea element for form inside of new-tweet
   $('#tweet-text').keyup(function () {
     let chars = 140 - $(this).val().length; // jquery val() method returns the current value of the textarea element
-    let negativeChars = -1; 
+
     if (chars < 0) {
       // if < 0, display red negative numbers using css 
       $('#char-counter').css('color', 'red'); 
