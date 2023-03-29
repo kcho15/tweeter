@@ -88,10 +88,10 @@ $(document).ready(() => {
 
   // add a submit event handler to the form
   $form.on('submit', (event) => {
-    event.preventDefault(); // stop the browser from default behavior 
+    event.preventDefault(); // stop the browser from default behavior of refreshing the page 
     console.log('New tweet incoming!'); 
 
-    const urlencoded = $form.seralize(); // gives us back urlencoded data 
+    const urlencoded = $form.serialize(); // gives us back urlencoded data 
     console.log(urlencoded); // debugging
 
     $.ajax({
@@ -99,6 +99,7 @@ $(document).ready(() => {
       url: '/tweets',
       data: urlencoded,
     }).then((newTweet) => {
+      // .catch (err)
       console.log(newTweet);
 
     });

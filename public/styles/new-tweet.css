@@ -1,15 +1,11 @@
 
-#new-tweet-form #tweet-text-prompt {
+#new-tweet-form label {
   display: flex; 
   font-weight: 600;
   color: #545149;
   margin-top: 50px;
   padding-top: 1em; 
   padding-bottom: 2em; 
-}
-
-#tweet-text-prompt {
-  font-weight: 600;
 }
 
 /* child of #new-tweet-form */
@@ -36,11 +32,22 @@
 }
 
 button {
-  background: #304179;
+  background: #4056A1;
   color: #fff;
   border: none;
   border: 3px solid #4056A1;
+  border-radius: 5px 5px;
 }
+/* button animations */
+button:hover {
+  background: #304179;
+  border: 3px solid #304179;
+}
+button:active {
+  box-shadow: 5px 5px rgba(0, 0, 255, .2);
+  transform: translateY(3px);
+}
+
 
 .tweet {
   align-items: flex-end;
@@ -49,7 +56,7 @@ button {
   display: flex; 
   background: none;
   border: 3px solid #545149;
-  border-radius: 2px;
+  border-radius: 5px 5px;
   width: 100%;
   color: #545149;
   gap: 0.5em;
