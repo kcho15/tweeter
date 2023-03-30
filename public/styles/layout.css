@@ -14,6 +14,10 @@ html {
  * Global layout stuff
  */
 
+ /* html, body {
+  overflow-y: scroll;
+} */
+
 body {
   color: #545149;
   background-color: #f4f1ec;

@@ -48,6 +48,15 @@ button:active {
   transform: translateY(3px);
 }
 
+.error-message {
+  display: flex; 
+  color: red;
+  padding: 1rem; 
+  border: 3px solid red; 
+  border-radius: 5px 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 /*  */
 /* tweet boxes */
 /*  */
@@ -86,6 +95,7 @@ button:active {
   margin-bottom: 20px; 
   background: none;
   color: #545149;
+  word-wrap: break-word;
 }
 
 .user1 {
@@ -115,6 +125,7 @@ button:active {
   align-items: center;
   padding-bottom: 0.5em; 
   border-bottom: 3px solid #545149;
+  word-break: break-all;
 }
 
 footer {

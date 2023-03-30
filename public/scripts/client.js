@@ -6,6 +6,12 @@
 
 
 $(document).ready(() => {
+  
+  // Toggle slider for form submission 
+  // $("fa-solid fa-angles-down").click(function() {
+  //   $("#new-tweet-form").slideToggle(500); 
+  // }); 
+  
   const $tweetContainer = $("#tweets-container");
 
   const renderTweets = function(tweets) {
@@ -25,13 +31,13 @@ $(document).ready(() => {
         <header id="top-half">
             <div class="user1">
               <img src="${tweet.user.avatars}">
-              <span>${tweet.user.name}</span>
+              ${$("<span>").text(tweet.user.name).prop('outerHTML')} 
             </div>
-            <div class="handle">${tweet.user.handle}</div>
+            ${$('<div class="handle">').text(tweet.user.handle).prop('outerHTML')}
         </header>
-          <div class="canned-text">${tweet.content.text}</div>
+          ${$('<div class="canned-text">').text(tweet.content.text).prop('outerHTML')}
         <footer>
-          <div class="days">${timeago.format(tweet.created_at)}</div>
+          ${$('<div class="days">').text(timeago.format(tweet.created_at)).prop('outerHTML')}
           <div class="tweet-icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -51,48 +57,65 @@ $(document).ready(() => {
   $form.on('submit', (event) => {
   // prevent refresh, tweets load on page after submission
     event.preventDefault();
-    
+
+    const $errorMessage = $("#error-message-container");
+    $errorMessage.slideUp(); 
+
     // grab text from submission
     const $tweetText = $('#tweet-text');
-  
+    console.log('$tweetText', $tweetText)
+    
+    
+
+    // append the error message to submit button 
+    // $form.find("error-message").append($errorMessage)
+
     // Max character limit
     const maxCharLimit = 140;
 
-    // Validation checks including XSS 
-    // Error if no text is submitted, replaced .val() with .text() to safely encode user submitted text 
-    if ($tweetText.text().trim().length === 0) {
-      alert('Error: Tweet content is empty.');
+    // // Validation checks including XSS 
+    // // Error if no text is submitted submitted text 
+    if ($tweetText.val().trim().length === 0) {
+      $errorMessage.html(`<span class="error-message">⚠ Tweet empty! ⚠</span>`); 
+      $errorMessage.slideDown(400);
       return;
     }
+   
     // Error if tweet is above max char limit
-    if ($tweetText.text().length > maxCharLimit) {
-      alert('Error: Tweet length exceeds maximum limit.');
+    if ($tweetText.val().length > maxCharLimit) {  
+      $errorMessage.html(`<span class="error-message">⚠ Tweet length exceeded! ⚠</span>`); 
+      $errorMessage.slideDown(400);
       return;
     }
-  
+       
     console.log('New tweet incoming!'); // debugging
-
+    
     const urlencoded = $form.serialize(); // gives us back urlencoded data
-  
+    
     console.log(urlencoded); // debugging
-
+    
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: urlencoded,
     }).then(loadTweets);
+      // clear the textarea after submission
+      $('#tweet-text').val('');
   });
+  
+  
+ 
 
   const loadTweets = () => {
     $.ajax({
       method: 'GET',
       url: '/tweets',
-    }).then((tweets) =>{
-      $tweetContainer.empty(); 
-      renderTweets(tweets)
-    }); 
+    }).then(renderTweets) 
+    $tweetContainer.empty();
   };
-  
-  loadTweets(); // testing
+  // returns tweet-container to original state and prevents duplicate loads
+   
+
+  loadTweets(); 
   
 });
