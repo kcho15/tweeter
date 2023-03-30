@@ -92,6 +92,27 @@ const $form = $('#new-tweet-form');
 
 // add a submit event handler to the form
 $form.on('submit', (event) => {
+  // grab text from submission 
+  const $tweetText = $('#tweet-text');
+  
+  // Max character limit
+  const maxCharLimit = 140; 
+
+  // Validation checks 
+  // Error if no text is submitted 
+  if ($tweetText.val().trim().length === 0) { 
+    alert('Error: Tweet content is empty.'); 
+    event.preventDefault();
+    return; 
+  } 
+  // Error if tweet is above max char limit 
+  if ($tweetText.val().length > maxCharLimit) {
+    alert('Error: Tweet length exceeds maximum limit.');
+    event.preventDefault();
+    return;
+  }
+
+  
   event.preventDefault(); // stop the browser from default behavior of refreshing the page 
   console.log('New tweet incoming!');
 

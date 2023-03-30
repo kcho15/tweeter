@@ -48,7 +48,9 @@ button:active {
   transform: translateY(3px);
 }
 
-
+/*  */
+/* tweet boxes */
+/*  */
 .tweet {
   align-items: flex-end;
   flex-direction: column;
@@ -72,12 +74,13 @@ button:active {
   width: 100%;
 }
 
-/* Child of .tweet */
+/* Child of .tweet and inherits from header.css */
 #top-half {
   display: flex;
   flex-direction: row;
+  padding-top: 0; 
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100px;
   margin-top: 0;
   margin-bottom: 20px; 
