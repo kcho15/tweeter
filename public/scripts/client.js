@@ -58,14 +58,14 @@ $(document).ready(() => {
     // Max character limit
     const maxCharLimit = 140;
 
-    // Validation checks
-    // Error if no text is submitted
-    if ($tweetText.val().trim().length === 0) {
+    // Validation checks including XSS 
+    // Error if no text is submitted, replaced .val() with .text() to safely encode user submitted text 
+    if ($tweetText.text().trim().length === 0) {
       alert('Error: Tweet content is empty.');
       return;
     }
     // Error if tweet is above max char limit
-    if ($tweetText.val().length > maxCharLimit) {
+    if ($tweetText.text().length > maxCharLimit) {
       alert('Error: Tweet length exceeds maximum limit.');
       return;
     }
@@ -87,7 +87,10 @@ $(document).ready(() => {
     $.ajax({
       method: 'GET',
       url: '/tweets',
-    }).then(renderTweets);
+    }).then((tweets) =>{
+      $tweetContainer.empty(); 
+      renderTweets(tweets)
+    }); 
   };
   
   loadTweets(); // testing
