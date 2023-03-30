@@ -91,12 +91,12 @@ button:active {
   gap: 0.5em; 
 }
 
-
-.user1 img {
+/* circle portraits for square avatars */
+/* .user1 img {
   width: 40%;
   object-fit: cover;
   border-radius:50%;
-}
+} */
 
 .handle {
   color: #4056A1;
