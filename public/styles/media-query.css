@@ -60,6 +60,19 @@
     font-size: 0.8rem;
     gap: 0.5em; 
   }
+
+  body .nav #red-double-arrow {
+    display: flex;
+    background-color: #42c297;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: red;
+    border: none;
+  }
+
+  body .nav #red-double-arrow:hover {
+    background-color: #319272;
+  }
 }
 
 /* Tablet: minimum width of 425px to maximum width of 768px */
@@ -79,6 +92,20 @@
     margin-top: 4rem;
     padding-top: 0;
   }
+
+  body .nav #red-double-arrow {
+    display: flex;
+    background-color: #42c297;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: red;
+    border: none;
+  }
+
+  body .nav #red-double-arrow:hover {
+    background-color: #319272;
+  }
+
 }
 
 /* Tablet to Laptop: minimum width of 768px to maximum width of 1024px */
@@ -99,7 +126,19 @@
     font-family: 'Bungee',  cursive;
     font-size: 3rem; 
   }
-  
+
+  body .nav #red-double-arrow {
+    display: flex;
+    background-color: #42c297;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: red;
+    border: none;
+  }
+
+  body .nav #red-double-arrow:hover {
+    background-color: #319272;
+  }
 }
 
 /* Desktop: minimum width of 1025px  */

@@ -29,9 +29,10 @@
   font-size: 1.5rem; 
 }
 
-.fa-solid {
+#red-double-arrow {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
+  color: #ff0000;
 }
 
