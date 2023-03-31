@@ -6,12 +6,7 @@
 
 
 $(document).ready(() => {
-  
-  // Toggle slider for form submission 
-  // $("fa-solid fa-angles-down").click(function() {
-  //   $("#new-tweet-form").slideToggle(500); 
-  // }); 
-  
+    
   const $tweetContainer = $("#tweets-container");
 
   const renderTweets = function(tweets) {
@@ -59,63 +54,51 @@ $(document).ready(() => {
     event.preventDefault();
 
     const $errorMessage = $("#error-message-container");
-    $errorMessage.slideUp(); 
+    $errorMessage.slideUp();
 
     // grab text from submission
     const $tweetText = $('#tweet-text');
-    console.log('$tweetText', $tweetText)
+    console.log('$tweetText', $tweetText);
     
-    
-
-    // append the error message to submit button 
-    // $form.find("error-message").append($errorMessage)
-
     // Max character limit
     const maxCharLimit = 140;
 
-    // // Validation checks including XSS 
-    // // Error if no text is submitted submitted text 
+    //
+    // Validation checks
+    //
+    // Error if no text is submitted submitted text
     if ($tweetText.val().trim().length === 0) {
-      $errorMessage.html(`<span class="error-message">⚠ Tweet empty! ⚠</span>`); 
+      $errorMessage.html(`<span class="error-message">⚠ Tweet empty! ⚠</span>`);
       $errorMessage.slideDown(400);
       return;
     }
    
     // Error if tweet is above max char limit
-    if ($tweetText.val().length > maxCharLimit) {  
-      $errorMessage.html(`<span class="error-message">⚠ Tweet length exceeded! ⚠</span>`); 
+    if ($tweetText.val().length > maxCharLimit) {
+      $errorMessage.html(`<span class="error-message">⚠ Tweet length exceeded! ⚠</span>`);
       $errorMessage.slideDown(400);
       return;
     }
-       
-    console.log('New tweet incoming!'); // debugging
-    
+
+    // POST Route
     const urlencoded = $form.serialize(); // gives us back urlencoded data
-    
-    console.log(urlencoded); // debugging
-    
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: urlencoded,
     }).then(loadTweets);
-      // clear the textarea after submission
-      $('#tweet-text').val('');
+    // clear the textarea after submission
+    $('#tweet-text').val('');
   });
   
-  
- 
-
   const loadTweets = () => {
     $.ajax({
       method: 'GET',
       url: '/tweets',
-    }).then(renderTweets) 
-    $tweetContainer.empty();
+    }).then(renderTweets);
+    $tweetContainer.empty(); // returns tweet-container to original state and prevents duplicate loads
   };
-  // returns tweet-container to original state and prevents duplicate loads
-   
-
-  loadTweets(); 
+ 
+  loadTweets();
   
 });
