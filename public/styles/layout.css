@@ -14,10 +14,6 @@ html {
  * Global layout stuff
  */
 
- /* html, body {
-  overflow-y: scroll;
-} */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -35,9 +31,17 @@ main {
   width: 90%;
   background-color: #f4f1ec;
   margin: auto; 
-  padding-bottom: 2rem; 
+  padding-bottom: 2rem;
+  
 }
 
+.main-content {
+  width: 90%;
+  height: auto;
+  align-self: center;
+  margin-right: 5%;
+  margin-top: 0;
+ }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

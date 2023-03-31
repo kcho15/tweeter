@@ -1,0 +1,143 @@
+/* Mobile S to L: minimum width of 320px to maximum width of 425px */
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  body .nav {
+    background-color: #42c297;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    padding-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    justify-content: start;
+    height: 8rem;
+  }
+
+  body .nav .logo-text {
+    font-family: 'Bungee',  cursive;
+    font-size: 3rem; 
+  }
+
+  body header {
+    flex-direction: row;
+    height: 12rem; 
+    margin-top: 4rem; 
+    padding-bottom: 0;
+    justify-content: space-around;
+    font-size: 70%;
+    align-items: center;
+  }
+
+  body header .hex-avatar {
+    width: 5.5rem; 
+  }
+
+  #top-half .avatar {
+    width: 30%; 
+  }
+
+  .tweet #top-half {
+    justify-content: space-between;   
+    height: 3rem; 
+  }
+
+  .tweet #top-half .user1 .handle {
+    display: flex; 
+    align-items: end;
+  }
+
+  .tweet .tweet-content {
+    font-size: 75%;
+    align-items: center;
+    padding-bottom: 0.5em; 
+    border-bottom: 2px solid #545149;
+    word-break: normal;
+  }
+
+  #tweets-container .tweet {
+    padding: 0.5rem; 
+  }
+
+  footer .tweet-icons .fa-solid {
+    font-size: 0.8rem;
+    gap: 0.5em; 
+  }
+}
+
+/* Tablet: minimum width of 425px to maximum width of 768px */
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  body .nav {
+    background-color: #42c297;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    padding-bottom: 0;
+  }
+
+  body .nav .logo-text {
+    font-family: 'Bungee',  cursive;
+    font-size: 3rem; 
+  }
+
+  header {
+    margin-top: 4rem;
+    padding-top: 0;
+  }
+}
+
+/* Tablet to Laptop: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  body .nav {
+    background-color: #42c297;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    padding-bottom: 0;
+  }
+
+  header {
+    margin-top: 4rem;
+    padding-top: 0;
+  }
+
+  body .nav .logo-text {
+    font-family: 'Bungee',  cursive;
+    font-size: 3rem; 
+  }
+  
+}
+
+/* Desktop: minimum width of 1025px  */
+@media only screen and (min-width: 1025px) {
+
+
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 8rem;
+    margin-left: 2rem;
+  }
+
+  .nav {
+    margin-bottom: 2em;
+  }
+
+  /* portrait and green bg */
+  header {
+    height: 6rem;
+    /* padding: 1rem;  */
+    width: 40%;
+    justify-content: center;
+  }
+
+  main {
+    margin-left: 0;
+    margin-right: 0;
+    width: 40%;
+    font-size: 1.2rem;
+  }
+
+  .tweets {
+    height: 5rem;
+    font-size: 0.75rem;
+
+  }
+
+}

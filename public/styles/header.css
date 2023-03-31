@@ -3,7 +3,7 @@ header {
   padding-top: 2em;
   padding-bottom: 0.5em;
   margin-bottom: 1em;
-  height: 400px;
+  height: 16.6rem;
   flex-direction: column;
   justify-content: end; 
   align-items: center;
@@ -15,7 +15,7 @@ header {
 .hex-avatar {
   display: flex; 
   justify-content: center;
-  width: 200px;
+  width: 10rem;
   height: auto; 
   padding-bottom: 0.5em;
 }

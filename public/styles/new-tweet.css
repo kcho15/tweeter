@@ -51,8 +51,10 @@ button:active {
 .error-message {
   display: flex; 
   color: red;
+  font-weight: 600;
   padding: 1rem; 
-  border: 3px solid red; 
+  margin-bottom: 1rem;
+  border: 4px solid red; 
   border-radius: 5px 5px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -63,7 +65,7 @@ button:active {
 .tweet {
   align-items: flex-end;
   flex-direction: column;
-  padding: 1em;
+  padding: 1rem;
   display: flex; 
   background: none;
   border: 3px solid #545149;
@@ -104,19 +106,12 @@ button:active {
   gap: 0.5em; 
 }
 
-/* circle portraits for square avatars */
-/* .user1 img {
-  width: 40%;
-  object-fit: cover;
-  border-radius:50%;
-} */
-
 .handle {
   color: #4056A1;
   font-weight: 600;
 }
 
-.canned-text {
+.tweet-content {
   display: flex;
   background: none;
   justify-content: flex-start;
@@ -125,7 +120,7 @@ button:active {
   align-items: center;
   padding-bottom: 0.5em; 
   border-bottom: 3px solid #545149;
-  word-break: break-all;
+  word-break: normal;
 }
 
 footer {

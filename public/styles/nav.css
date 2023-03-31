@@ -1,10 +1,11 @@
 .nav {
   display: flex;
-  height: 120px;
+  height: 5.5rem;
   padding-left: 1.5em;
   padding-right: 1.5em;
   justify-content: space-between;
-  padding-bottom: 1.25rem;
+  padding-top: 1.5rem; 
+  padding-bottom: 1rem;
   background-color: #4056A1;
   color: #FFFFFF;
   align-items: flex-end;
@@ -17,7 +18,7 @@
 
 .logo-text {
   font-family: 'Bungee',  cursive;
-  font-size: 200%; 
+  font-size: 2rem; 
 }
 
 .icon-text-container {
@@ -25,12 +26,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  font-size: 1.75rem; 
+  font-size: 1.5rem; 
 }
 
 .fa-solid {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
