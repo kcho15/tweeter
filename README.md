@@ -19,17 +19,18 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-Desktop View
+### Desktop View
 !["Desktop View"](https://github.com/kcho15/tweeter/blob/master/public/images/docs/tweeter-desktop.PNG?raw=true)
 
-Tablet View
+### Tablet View
 !["Tablet View"](https://github.com/kcho15/tweeter/blob/master/public/images/docs/tweeter-tablet.PNG?raw=true)
 
-Mobile View
+### Mobile View
+
 !["Mobile View"](https://github.com/kcho15/tweeter/blob/master/public/images/docs/tweeter-mobile.PNG?raw=true)
 
-Error Handling Ex.1
+### Error Handling Ex.1
 !["Error Handling Ex.1](https://github.com/kcho15/tweeter/blob/master/public/images/docs/tweeter-error1.PNG?raw=true)
 
-Error Handling Ex.1
+### Error Handling Ex.2
 !["Error Handling Ex.1](https://github.com/kcho15/tweeter/blob/master/public/images/docs/tweeter-error2.PNG?raw=true)
