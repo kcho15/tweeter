@@ -30,12 +30,12 @@ $(document).ready(() => {
       <article class="tweet">
         <header id="top-half">
             <div class="user1">
-              <img src="${tweet.user.avatars}">
+              <img class="avatar" src="${tweet.user.avatars}">
               ${$("<span>").text(tweet.user.name).prop('outerHTML')} 
             </div>
             ${$('<div class="handle">').text(tweet.user.handle).prop('outerHTML')}
         </header>
-          ${$('<div class="canned-text">').text(tweet.content.text).prop('outerHTML')}
+          ${$('<div class="tweet-content">').text(tweet.content.text).prop('outerHTML')}
         <footer>
           ${$('<div class="days">').text(timeago.format(tweet.created_at)).prop('outerHTML')}
           <div class="tweet-icons">
