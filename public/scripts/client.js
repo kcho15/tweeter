@@ -58,8 +58,7 @@ $(document).ready(() => {
 
     // grab text from submission
     const $tweetText = $('#tweet-text');
-    console.log('$tweetText', $tweetText);
-    
+        
     // Max character limit
     const maxCharLimit = 140;
 
@@ -86,19 +85,26 @@ $(document).ready(() => {
       method: 'POST',
       url: '/tweets',
       data: urlencoded,
-    }).then(loadTweets);
-    // clear the textarea after submission
-    $('#tweet-text').val('');
+    }).then(() => {
+      $('#char-counter').text(140); // added reset
+      $('#tweet-text').val('');
+      loadTweets();
+    });
+
   });
   
   const loadTweets = () => {
     $.ajax({
       method: 'GET',
       url: '/tweets',
-    }).then(renderTweets);
-    $tweetContainer.empty(); // returns tweet-container to original state and prevents duplicate loads
+      success: data => {
+        $tweetContainer.empty(); // returns tweet-container to original state and prevents duplicate loads
+        renderTweets(data);
+      }
+    });
   };
  
   loadTweets();
   
 });
+

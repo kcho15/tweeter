@@ -1,23 +1,26 @@
 // Character counter function
 
 $(document).ready(function() {
-  // Display default 140 char count
-  $('#char-counter').text('140');
-  // event handler to textarea element for form inside of new-tweet
-  $('#tweet-text').keyup(function() {
-    let chars = 140 - $(this).val().length; // jquery val() method returns the current value of the textarea element
 
-    if (chars < 0) {
-      // if < 0, display red negative numbers using css
-      $('#char-counter').css('color', 'red');
-    } else {
-      // reset color back to default
-      $('#char-counter').css('color', '');
-    }
-    // Update the text of the element id char-counter to display chars left
-    // $('#char-counter').text(chars); < bad practice
-    // traverse up the DOM tree with .closest from textarea until it finds the nearest form element
-    // .find goes back down the DOM tree to find the id char-counter
-    $(this).closest('form').find('#char-counter').text(chars);
-  });
-});
+  $('#tweet-text').on('input', onInput)
+
+}); 
+
+const onInput = function(event) {
+  
+  // (this) is the textarea in id "tweet-text"
+  let $input = $(this); 
+  let length = $input.val().length;
+  let chars = 140 - length; 
+
+  const $form = $input.closest('form');
+  const $counter = $form.find('#char-counter')
+  
+  $counter.html(chars); 
+
+  if (chars < 0) {
+    $counter.addClass('form-red');
+  } else {
+    $counter.removeClass('form-red'); 
+  }
+};

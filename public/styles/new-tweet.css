@@ -59,6 +59,10 @@ button:active {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.form-red {
+  color: red; 
+}
+
 /*  */
 /* tweet boxes */
 /*  */
